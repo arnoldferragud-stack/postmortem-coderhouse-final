@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Post-Mortem Técnico | Coderhouse</title>
+
+<style>
+
+body{
+font-family:Arial,Helvetica,sans-serif;
+background:#f5f7fa;
+margin:0;
+padding:40px;
+color:#333;
+line-height:1.6;
+}
+
+.container{
+max-width:900px;
+margin:auto;
+background:white;
+padding:40px;
+border-radius:12px;
+box-shadow:0 5px 15px rgba(0,0,0,.1);
+}
+
+h1{
+color:#1f4e79;
+}
+
+h2{
+margin-top:40px;
+color:#1f4e79;
+border-bottom:2px solid #ddd;
+padding-bottom:10px;
+}
+
+.card{
+background:#f8f9fa;
+padding:20px;
+border-left:5px solid #1f4e79;
+margin-top:20px;
+border-radius:8px;
+}
+
+footer{
+text-align:center;
+margin-top:50px;
+font-size:.9rem;
+color:#666;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Cuando un despliegue falló</h1>
+
+<p><strong>Análisis Post-Mortem de un incidente técnico</strong></p>
+
+<h2>Contexto</h2>
+
+<div class="card">
+
+TaskFlow es una aplicación web creada para gestionar tareas dentro de pequeñas empresas.
+
+El proyecto fue publicado mediante GitHub Pages para realizar pruebas con usuarios antes del lanzamiento oficial.
+
+</div>
+
+<h2>Problema</h2>
+
+<div class="card">
+
+Después del despliegue el sitio únicamente mostraba una pantalla completamente blanca.
+
+Los usuarios no podían acceder a ninguna funcionalidad.
+
+</div>
+
+<h2>Acciones realizadas</h2>
+
+<div class="card">
+
+<ul>
+
+<li>Se revisó el despliegue.</li>
+
+<li>Se inspeccionó la consola del navegador.</li>
+
+<li>Se detectó un error en el nombre de un archivo JavaScript.</li>
+
+<li>Se corrigió el problema.</li>
+
+<li>Se realizó un nuevo despliegue.</li>
+
+</ul>
+
+</div>
+
+<h2>Post-Mortem</h2>
+
+<div class="card">
+
+<strong>Causa raíz:</strong>
+
+El archivo App.js tenía un nombre distinto al referenciado desde el HTML.
+
+GitHub Pages diferencia mayúsculas y minúsculas.
+
+</div>
+
+<h2>Aprendizajes</h2>
+
+<div class="card">
+
+Este incidente permitió comprender la importancia del control de versiones, la documentación técnica y la revisión colaborativa antes de cada despliegue.
+
+</div>
+
+<h2>Feedback Radicalmente Sincero</h2>
+
+<div class="card">
+
+El feedback recibido permitió simplificar la documentación para que pudiera ser comprendida tanto por perfiles técnicos como no técnicos.
+
+</div>
+
+<footer>
+
+Proyecto Final • Coderhouse • Arnold Ferragud
+
+</footer>
+
+</div>
+
+</body>
+</html>
